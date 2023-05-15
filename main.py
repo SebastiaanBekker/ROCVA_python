@@ -1,1 +1,1 @@
-print(round(,3))
+# vraag de gebruiker om een getal in te voeren
