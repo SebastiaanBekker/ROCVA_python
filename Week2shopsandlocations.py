@@ -33,8 +33,9 @@ for transactie in transacties.items():
 # Begin met het gemiddelde te berekenen:
 ## Hier zitten twee fouten in de code, kun je die vinden?
 totaal_bedrag = 0
-if transactie in transacties.items() # juiste loop?
-    totaal_bedrag = totaal_bedrag + transactie[1][2] # dit telt de bedragen op
+# Haal de comment weg en maak de loop werkend:
+#if transactie in transacties.items() # juiste loop?
+#    totaal_bedrag = totaal_bedrag + transactie[1][2] # dit telt de bedragen op
 
 print (totaal_bedrag)
 ## Als het bedrag voor het totaal nu klopt, kun je het gemiddelde berekenen? Kijk anders even op chatpgpt ;-)
@@ -64,11 +65,11 @@ standaard_afwijking = calculate_std_dev(gemiddelde, bedragen)
 print("De rare bedragen zijn:")
 
 aantal_rare_bedragen = 0
-## een loop met weer een paar fouten ;-)
-for transactie in transacties.items():
-if transactie[1][2] > gemiddelde + standaard_afwijking * 2:
-print (transactie)
-aantal_rare_bedragen = aantal_rare_bedragen + 1
+## een loop met weer een paar fouten ;-) Haal de comment weg en maak de loop werkend:
+#for transactie in transacties.items():
+#if transactie[1][2] > gemiddelde + standaard_afwijking * 2:
+#print (transactie)
+#aantal_rare_bedragen = aantal_rare_bedragen + 1
 
 assert aantal_rare_bedragen == 4, "Er zijn geen 4 rare bedragen" # dit is een test, als het gemiddelde niet klopt, stopt de code hier
 
